@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michi Panadería - Panel Administrador</title>
+  <link rel="stylesheet" href="/estilos/style.css">
+</head>
+<body class="admin-body">
+
+  <header class="header admin-header">
+    <div class="marca">
+      <div class="marca-logo"></div>
+      <span>Michi Panadería | Panel Admin</span>
+    </div>
+    <div class="admin-user-info">
+      <span>🐱 Admin: MichiBoss</span>
+      <a href="index.html" class="btn-logout">Cerrar Sesión</a>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <nav class="admin-menu">
+        <div class="menu-group">
+          <h3>📌 Panel Home</h3>
+          <a href="#dashboard" class="menu-item active">Dashboard General</a>
+        </div>
+
+        <div class="menu-group">
+          <h3>🍞 Gestión Productos</h3>
+          <a href="#mostrar-productos" class="menu-item">Mostrar Productos</a>
+          <a href="#nuevo-producto" class="menu-item">Nuevo Producto</a>
+        </div>
+
+        <div class="menu-group">
+          <h3>👥 Gestión Usuarios</h3>
+          <a href="#mostrar-usuarios" class="menu-item">Mostrar Usuarios</a>
+          <a href="#nuevo-usuario" class="menu-item">Nuevo Usuario</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="admin-content">
+
+      <section id="dashboard" class="admin-card">
+        <h2>Bienvenido al Panel Administrador</h2>
+        <p>Desde aquí puedes gestionar el inventario de la tienda y los usuarios registrados.</p>
+        
+        <div class="dashboard-stats">
+          <div class="stat-box">
+            <h4>Total Productos</h4>
+            <span class="stat-number">24</span>
+          </div>
+          <div class="stat-box">
+            <h4>Usuarios Registrados</h4>
+            <span class="stat-number">128</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="mostrar-productos" class="admin-card">
+        <div class="card-header">
+          <h2>Mostrar Productos</h2>
+          <a href="#nuevo-producto" class="btn-action">+ Nuevo Producto</a>
+        </div>
+        
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#01</td>
+              <td><div class="img-placeholder img-placeholder-thumb"></div></td>
+              <td>Pancitos Michi</td>
+              <td>$2.500</td>
+              <td class="table-actions">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#02</td>
+              <td><div class="img-placeholder img-placeholder-thumb"></div></td>
+              <td>Michi Tortas</td>
+              <td>$15.000</td>
+              <td class="table-actions">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="nuevo-producto" class="admin-card">
+        <h2>Nuevo / Editar Producto</h2>
+        <form class="admin-form">
+          <div class="form-group">
+            <label for="prod-name">Nombre del Producto:</label>
+            <input type="text" id="prod-name" placeholder="Ej. Michi Pastelito">
+          </div>
+          
+          <div class="form-group">
+            <label for="prod-price">Precio ($):</label>
+            <input type="text" id="prod-price" placeholder="Ej. 3500">
+          </div>
+
+          <div class="form-group">
+            <label for="prod-img">Imagen del Producto:</label>
+            <input type="file" id="prod-img">
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-save">Guardar Producto</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="mostrar-usuarios" class="admin-card">
+        <div class="card-header">
+          <h2>Mostrar Usuarios</h2>
+          <a href="#nuevo-usuario" class="btn-action">+ Nuevo Usuario</a>
+        </div>
+        
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#101</td>
+              <td>Michi Clientela</td>
+              <td>cliente@michi.com</td>
+              <td>Cliente</td>
+              <td class="table-actions">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="nuevo-usuario" class="admin-card">
+        <h2>Nuevo / Editar Usuario</h2>
+        <form class="admin-form">
+          <div class="form-group">
+            <label for="user-name">Nombre Completo:</label>
+            <input type="text" id="user-name" placeholder="Ej. Pedro Michi">
+          </div>
+
+          <div class="form-group">
+            <label for="user-email">Correo Electrónico:</label>
+            <input type="email" id="user-email" placeholder="correo@ejemplo.com">
+          </div>
+
+          <div class="form-group">
+            <label for="user-role">Rol de Usuario:</label>
+            <select id="user-role">
+              <option value="cliente">Cliente</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-save">Guardar Usuario</button>
+          </div>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
