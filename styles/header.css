@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "system-ui"
+}
+
+header{
+    display: flex; /*contenedor flex, acomodarse por fila*/
+    align-items: center; /*alinear al centro*/
+    justify-content: space-evenly;/*espacios iguales entre todo*/
+    border-bottom: 0.5px solid #efc2c2;/*linea de separación*/
+    flex-wrap: wrap;/*que no se apreten y se acomoden*/
+}
+
+body {
+    color: #f7e7e7;
+}
+
+
+
