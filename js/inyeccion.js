@@ -15,10 +15,10 @@ function inyectarFooter() {
           <div class="footer-columna">
             <h2>Conócenos!</h2>
             <div class="conocenos">
-              <div><a href="#">Ayuda</a></div>
-              <div><a href="#">Locales</a></div>
-              <div><a href="#">Términos y condiciones</a></div>
-              <div><a href="#">Políticas y privacidad</a></div>
+              <div><a href="../contactos/index.html">Contactanos</a></div>
+              <div><a href="../locales/index.html">Locales</a></div>
+              <div><a href="../terminos/index.html">Términos y condiciones</a></div>
+              <div><a href="../terminos/index.html">Políticas y privacidad</a></div>
             </div>
           </div>
 
