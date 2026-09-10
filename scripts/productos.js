@@ -18,6 +18,7 @@ function mostrarProductos() {
         <h2>${producto.nombre}</h2>
         <p>${producto.precio}</p>
         <a href="producto.html?id=${producto.id}" class="btn btn-primary">Ver más</a>
+        <button onclick="agregarAlCarrito(${producto.id})"> Agregar al carrito </button>
       </div>
     `;
   }
@@ -35,6 +36,7 @@ function mostrarProducto() {
         <img class="caluga-img" src="${producto.img}" alt="${producto.nombre}">
         <h2>${producto.nombre}</h2>
         <p>${producto.precio}</p>
+        <button onclick="agregarAlCarrito(${producto.id})"> Agregar al carrito </button>
       </div>
     `;
   }
